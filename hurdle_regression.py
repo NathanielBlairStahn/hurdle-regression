@@ -19,7 +19,7 @@ class HurdleLinearRegression():
         self.linear.fit(X[y>0], y[y>0])
         return self
 
-    def predict(self, X, y):
+    def predict(self, X):
         p = self.logistic.predict_proba(X)
         y_hat = self.linear.predict(X)
         return p * y_hat
